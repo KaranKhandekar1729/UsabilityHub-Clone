@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>UsabilityHub | User Research &amp; Usability Testing Platform</title>
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" href="https://assets-global.website-files.com/5af97a9c84ec1bc79d81b5f4/5b2c914bc164cd8c8243e8a5_hubert_webclip.png" type="image/x-icon">
+
+    <!-- Styling -->
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive Styling -->
+
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -25,7 +36,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/images/UHLogo_standard.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -35,6 +46,7 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="hamburger nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -121,6 +133,8 @@
         </div>
     </section>
 
+    <!-- Big Feature Section 1 -->
+
     <section class="big-feature-section">
         <div class="container flex big-feature-container">
             <div class="feature-image">
@@ -134,8 +148,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Big Feature Section 2 -->
+
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-image">
                 <img src="./assets/images/home_marketer.png" alt="home designer">
             </div>
@@ -148,6 +165,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Big Feature Section 3 -->
+
     <section class="big-feature-section">
         <div class="container flex big-feature-container">
             <div class="feature-image">
@@ -173,7 +193,16 @@
             </div>
             <div class="examples-area flex">
                 <a href="#" class="examples-card">
-                    <h3 class="card-text">Can users complete a task in my software interface?</h3>
+                    <h4 class="card-text">Can users complete a task in my software interface?</h4>
+                </a>
+                <a href="#" class="examples-card">
+                    <h4 class="card-text">Can users find important pages on my website?</h4>
+                </a>
+                <a href="#" class="examples-card">
+                    <h4 class="card-text">Is my website's intended audience clear?</h4>
+                </a>
+                <a href="#" class="examples-card">
+                    <h4 class="card-text">Do visitors understand what a page is about?</h4>
                 </a>
             </div>
         </div>
@@ -240,7 +269,19 @@
         </div>
     </div>
 
+    <!-- Symbol and Icons -->
+
     <script src="https://kit.fontawesome.com/be53a035fb.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+    </script>
 </body>
 
 </html>
